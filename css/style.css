@@ -1,0 +1,255 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	background: url('../img/bodyBG.jpg');
+}
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.top {
+	background: url("../img/bg1.jpg") no-repeat; 
+	background-size: cover;
+	position: relative;
+	z-index: 2;
+}
+.top::before {
+	content:'';
+	
+	width: 20px;
+	box-shadow: -10px 0px 5px #efefef;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+
+}
+.top::after {
+	content:'';
+	
+	width: 20px;
+	box-shadow: 10px 0px 5px #efefef;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	right: 0;
+
+}
+.footer::before {
+	content:'';
+	
+	width: 20px;
+	box-shadow: -10px 0px 5px #efefef;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+
+}
+.footer::after {
+	content:'';
+	
+	width: 20px;
+	box-shadow: 10px 0px 5px #efefef;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	right: 0;
+
+}
+
+
+a.runBottom {
+	display: inline-block;
+	padding: 10px 15px;
+	border-radius: 50%;
+	background-color: white;
+	color:black;
+	margin-bottom: -100px;
+	cursor: pointer;
+	border:1px solid black;
+}
+a.runBottom:hover {
+	background-color: #D5DADB;
+}
+a.runBottom i {
+	color: black;
+	font-size: 20px;
+}
+.runBtnCont {
+	text-align: center;
+}
+.footer {
+	background: url("../img/bg2.png") #fff; 
+	position: relative;
+}
+
+header.header {
+	margin-right: 15px;
+	margin-left: 15px;
+	background-color: rgba(239,239,239, 0.9);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border:1px solid white;
+	border-top: none;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+main.main {
+	padding-bottom: 50px;
+}
+.siteTitle {
+	font-size: 20px;
+	font-family: 'Cormorant', serif;
+	text-align: center;
+}
+section.infoTimeWork {
+	padding-top: 200px;
+	padding-bottom: 100px;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+ ul.infoTimeWork_list {
+ 	background-color: rgba(239,239,239, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+
+ 	box-shadow: 3px 3px rgba(239,239,239, 0.5);
+ }
+ li.infoTimeWork_item {
+ 	list-style: none;
+ }
+li.infoTimeWork_item:not(:last-child){
+	margin-bottom: 10px;
+}
+ li.infoTimeWork_item h2 {
+ 	font-size: 20px;
+	font-family: 'Cormorant', serif;
+ }
+ .accordion, .panel {
+ 	width: calc(70% - 40px);
+ 	display: block;
+ 	margin: 0 auto;
+ 	padding: 10px;
+ 	transition: all 1s;
+
+ }
+.accordion {cursor: pointer;}
+.active:before {transform: rotate(45deg)!important;}
+.active:after {transform: rotate(45deg)!important;}
+.accordion:before {
+	display: inline-block;
+	content: '';
+	height: 10px;
+	width: 10px;
+	margin-right: 18px;
+	border-bottom: 2px solid currentColor;
+	border-right: 2px solid currentColor;
+	transform: rotate(-45deg);
+}
+.accordion:after {
+	display: inline-block;
+	content: '';
+	height: 10px;
+	width: 10px;
+	margin-left: 12px;
+	border-bottom: 2px solid currentColor;
+	border-right: 2px solid currentColor;
+	transform: rotate(135deg);
+}
+.panel {background-color: rgba(255,255,255, 0.8);}
+.panelContainer p{
+		font-family: 'Cormorant', serif;
+		font-size: 18px;
+}
+.panelContainer p:not(:last-child){margin-bottom: 10px;}
+ /* footer */
+ footer.footer {
+ 	padding: 40px 20px;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ }
+.footerTitle {
+	display: block;
+	text-align: center;
+	padding: 10px;
+	font-size: 25px;
+	font-weight: 600;
+	color:#000;
+	font-family: "Cormorant", serif;
+}
+.footerContainer {
+	display: flex;
+}
+.info {
+	padding-left: 20px;
+	width: 50%;
+}
+.info p {
+	font-size: 18px;
+	font-family: "Cormorant", serif;
+	line-height: 18px;
+
+}
+.info p:not(:last-child){
+	margin-bottom: 15px;
+}
+.info p.push {
+	font-size: 35px;
+}
+.info span.adress, p.like {
+	font-size: 24px;
+}
+.googleMap {
+	width: 50%;
+	display: flex;
+	border:2px solid black;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.googleMap iframe {
+	width: 100%;
+	height: auto;
+}
+@media screen and (max-width: 888px){
+	.footerContainer {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.googleMap {
+		width: 100%;
+		display: flex;
+	}
+	.info {
+	    padding-left: 0;
+	    width: 100%;
+	    padding-top: 20px;
+	}
+}
+@media screen and (max-width: 600px){
+	.accordion, .panel {
+	    width: calc(100% - 40px);
+	}
+	section.infoTimeWork {
+		padding-top: 50px;
+    	padding-bottom: 30px;
+	}
+	.siteTitle {
+		font-size: 16px;
+	}
+
+}
