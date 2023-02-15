@@ -1,5 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 *{
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
@@ -22,7 +30,8 @@
 	content:'';
 	
 	width: 20px;
-	box-shadow: -10px 0px 5px #efefef;
+	-webkit-box-shadow: -10px 0px 5px #efefef;
+	        box-shadow: -10px 0px 5px #efefef;
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -34,7 +43,8 @@
 	content:'';
 	
 	width: 20px;
-	box-shadow: 10px 0px 5px #efefef;
+	-webkit-box-shadow: 10px 0px 5px #efefef;
+	        box-shadow: 10px 0px 5px #efefef;
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -46,7 +56,8 @@
 	content:'';
 	
 	width: 20px;
-	box-shadow: -10px 0px 5px #efefef;
+	-webkit-box-shadow: -10px 0px 5px #efefef;
+	        box-shadow: -10px 0px 5px #efefef;
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -58,7 +69,8 @@
 	content:'';
 	
 	width: 20px;
-	box-shadow: 10px 0px 5px #efefef;
+	-webkit-box-shadow: 10px 0px 5px #efefef;
+	        box-shadow: 10px 0px 5px #efefef;
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -117,8 +129,12 @@ section.infoTimeWork {
 	padding-bottom: 100px;
 	padding-left: 15px;
 	padding-right: 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 }
 a.phonNumber {
 	position: relative;
@@ -139,8 +155,12 @@ a.phonNumber::before {
     border-radius: 5px;
  }
  .socialCont {
+ 	display: -webkit-box;
+ 	display: -ms-flexbox;
  	display: flex;
- 	justify-content: space-between;
+ 	-webkit-box-pack: justify;
+ 	    -ms-flex-pack: justify;
+ 	        justify-content: space-between;
  }
   .socialCont a{padding: 10px;}
   .socialCont a:hover i {
@@ -156,7 +176,9 @@ a.phonNumber::before {
     border-radius: 5px;
     border: 1px solid #fff;
 
- 	box-shadow: 3px 3px rgba(239,239,239, 0.5);
+ 	-webkit-box-shadow: 3px 3px rgba(239,239,239, 0.5);
+
+ 	        box-shadow: 3px 3px rgba(239,239,239, 0.5);
  }
  li.infoTimeWork_item {
  	list-style: none;
@@ -173,12 +195,14 @@ li.infoTimeWork_item:not(:last-child){
  	display: block;
  	margin: 0 auto;
  	padding: 10px;
+ 	-webkit-transition: all 1s;
+ 	-o-transition: all 1s;
  	transition: all 1s;
 
  }
 .accordion {cursor: pointer;}
-.active:before {transform: rotate(45deg)!important;}
-.active:after {transform: rotate(45deg)!important;}
+.active:before {-webkit-transform: rotate(45deg)!important;-ms-transform: rotate(45deg)!important;transform: rotate(45deg)!important;}
+.active:after {-webkit-transform: rotate(45deg)!important;-ms-transform: rotate(45deg)!important;transform: rotate(45deg)!important;}
 .accordion:before {
 	display: inline-block;
 	content: '';
@@ -187,7 +211,9 @@ li.infoTimeWork_item:not(:last-child){
 	margin-right: 18px;
 	border-bottom: 2px solid currentColor;
 	border-right: 2px solid currentColor;
-	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 .accordion:after {
 	display: inline-block;
@@ -197,7 +223,9 @@ li.infoTimeWork_item:not(:last-child){
 	margin-left: 12px;
 	border-bottom: 2px solid currentColor;
 	border-right: 2px solid currentColor;
-	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	    -ms-transform: rotate(135deg);
+	        transform: rotate(135deg);
 }
 .panel {background-color: rgba(255,255,255, 0.8);}
 .panelContainer p{
@@ -221,6 +249,8 @@ li.infoTimeWork_item:not(:last-child){
 	font-family: "Cormorant", serif;
 }
 .footerContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 .info {
@@ -244,6 +274,8 @@ li.infoTimeWork_item:not(:last-child){
 }
 .googleMap {
 	width: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	border:2px solid black;
 	border-radius: 10px;
@@ -255,12 +287,18 @@ li.infoTimeWork_item:not(:last-child){
 }
 @media screen and (max-width: 888px){
 	.footerContainer {
-		flex-wrap: wrap;
-		flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 
 	.googleMap {
 		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 	.info {
