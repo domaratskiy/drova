@@ -120,7 +120,36 @@ section.infoTimeWork {
 	display: flex;
 	justify-content: flex-end;
 }
-
+a.phonNumber {
+	position: relative;
+	padding: 10px;
+	display: inline-block;
+}
+a.phonNumber::before {
+    position: absolute;
+    left: -58px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f095";
+    color: black;
+    font-size: 31px;
+    color: currentColor;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+ }
+ .socialCont {
+ 	display: flex;
+ 	justify-content: space-between;
+ }
+  .socialCont a{padding: 10px;}
+  .socialCont a:hover i {
+  	color: rgba(0,0,0, 0.5);
+  }
+  .socialCont a i{
+  	color:black;
+  	font-size: 40px;
+  }
  ul.infoTimeWork_list {
  	background-color: rgba(239,239,239, 0.9);
     padding: 20px;
@@ -242,7 +271,7 @@ li.infoTimeWork_item:not(:last-child){
 }
 @media screen and (max-width: 600px){
 	.accordion, .panel {
-	    width: calc(100% - 40px);
+	    width: calc(100% - 20px);
 	}
 	section.infoTimeWork {
 		padding-top: 50px;
