@@ -11,6 +11,10 @@
 	margin: 0;
 	padding: 0;
 }
+img{
+	max-width: 100%;
+	height: auto;
+}
 .container {
 	height: 100%;
 	width: 100%;
@@ -115,6 +119,7 @@ header.header {
 	border-top: none;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	box-shadow: 3px 3px 10px #000;
 }
 main.main {
 	padding-bottom: 50px;
@@ -140,6 +145,7 @@ a.phonNumber {
 	position: relative;
 	padding: 10px;
 	display: inline-block;
+	color: black;
 }
 a.phonNumber::before {
     position: absolute;
@@ -176,9 +182,9 @@ a.phonNumber::before {
     border-radius: 5px;
     border: 1px solid #fff;
 
- 	-webkit-box-shadow: 3px 3px rgba(239,239,239, 0.5);
+ 	-webkit-box-shadow: 3px 3px 10px #000;
 
- 	        box-shadow: 3px 3px rgba(239,239,239, 0.5);
+ 	        box-shadow: 3px 3px 10px #000;
  }
  li.infoTimeWork_item {
  	list-style: none;
@@ -198,9 +204,12 @@ li.infoTimeWork_item:not(:last-child){
  	-webkit-transition: all 1s;
  	-o-transition: all 1s;
  	transition: all 1s;
-
+    box-shadow: 3px 3px 10px #000;
  }
-.accordion {cursor: pointer;}
+.accordion {
+	cursor: pointer;
+	font-size: 14px;
+}
 .active:before {-webkit-transform: rotate(45deg)!important;-ms-transform: rotate(45deg)!important;transform: rotate(45deg)!important;}
 .active:after {-webkit-transform: rotate(45deg)!important;-ms-transform: rotate(45deg)!important;transform: rotate(45deg)!important;}
 .accordion:before {
@@ -285,6 +294,25 @@ li.infoTimeWork_item:not(:last-child){
 	width: 100%;
 	height: auto;
 }
+.productCont {
+
+}
+.productCont figure {
+	display: flex;
+	flex-wrap: wrap;
+}
+.productCont figure a {
+	display: flex;
+}
+.productCont figure a {
+	width: calc(20% - 10px);
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.price {
+	color: red;
+	font-weight: 600;
+}
 @media screen and (max-width: 888px){
 	.footerContainer {
 		-ms-flex-wrap: wrap;
@@ -309,7 +337,7 @@ li.infoTimeWork_item:not(:last-child){
 }
 @media screen and (max-width: 600px){
 	.accordion, .panel {
-	    width: calc(100% - 20px);
+	    width: calc(100% - 30px);
 	}
 	section.infoTimeWork {
 		padding-top: 50px;
@@ -318,5 +346,12 @@ li.infoTimeWork_item:not(:last-child){
 	.siteTitle {
 		font-size: 16px;
 	}
+
+}
+@media screen and (max-width: 370px){
+.accordion {
+	font-size: 12px;
+	padding: 10px 5px;
+}
 
 }
