@@ -205,10 +205,15 @@ li.infoTimeWork_item:not(:last-child){
  	-o-transition: all 1s;
  	transition: all 1s;
     box-shadow: 3px 3px 10px #000;
+    background: rgb(189,177,177);
+background: linear-gradient(180deg, rgba(189,177,177,1) 46%, rgba(255,255,255,1) 77%, rgba(255,255,255,1) 78%);
  }
 .accordion {
 	cursor: pointer;
 	font-size: 14px;
+}
+.accordion:nth-of-type(1){
+	border-top-left-radius: 10px;
 }
 .active:before {-webkit-transform: rotate(45deg)!important;-ms-transform: rotate(45deg)!important;transform: rotate(45deg)!important;}
 .active:after {-webkit-transform: rotate(45deg)!important;-ms-transform: rotate(45deg)!important;transform: rotate(45deg)!important;}
@@ -256,6 +261,7 @@ li.infoTimeWork_item:not(:last-child){
 	font-weight: 600;
 	color:#000;
 	font-family: "Cormorant", serif;
+	text-transform: uppercase;
 }
 .footerContainer {
 	display: -webkit-box;
@@ -277,9 +283,13 @@ li.infoTimeWork_item:not(:last-child){
 }
 .info p.push {
 	font-size: 35px;
+	line-height: 43px;
 }
 .info span.adress, p.like {
 	font-size: 24px;
+}
+.adress {
+
 }
 .googleMap {
 	width: 50%;
@@ -295,11 +305,12 @@ li.infoTimeWork_item:not(:last-child){
 	height: auto;
 }
 .productCont {
-
+	padding:20px 0;
 }
 .productCont figure {
 	display: flex;
-	flex-wrap: wrap;
+
+	justify-content: space-between;
 }
 .productCont figure a {
 	display: flex;
@@ -310,9 +321,12 @@ li.infoTimeWork_item:not(:last-child){
 	margin-right: 5px;
 }
 .price {
-	color: red;
+color: #05971d;
 	font-weight: 600;
 }
+
+
+
 @media screen and (max-width: 888px){
 	.footerContainer {
 		-ms-flex-wrap: wrap;
