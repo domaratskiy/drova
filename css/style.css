@@ -1,9 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
+
 
 *{
 	-webkit-box-sizing: border-box;
@@ -206,14 +201,32 @@ li.infoTimeWork_item:not(:last-child){
  	transition: all 1s;
     box-shadow: 3px 3px 10px #000;
     background: rgb(189,177,177);
-background: linear-gradient(180deg, rgba(189,177,177,1) 46%, rgba(255,255,255,1) 77%, rgba(255,255,255,1) 78%);
+	background: linear-gradient(180deg, rgba(189,177,177,1) 46%, rgba(255,255,255,1) 77%, rgba(255,255,255,1) 78%);
  }
 .accordion {
 	cursor: pointer;
 	font-size: 14px;
+	border: none;
+	appearance: none;
 }
+.accordion:not(:last-child) {
+    border-bottom: 1px dashed black;
+}
+
 .accordion:nth-of-type(1){
 	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.accordion:last-of-type {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom: none;
+}
+.panel {
+	border-bottom:1px dashed black;
+}
+.panel:last-of-type {
+	border-top:1px dashed black;
 }
 .active:before {-webkit-transform: rotate(45deg)!important;-ms-transform: rotate(45deg)!important;transform: rotate(45deg)!important;}
 .active:after {-webkit-transform: rotate(45deg)!important;-ms-transform: rotate(45deg)!important;transform: rotate(45deg)!important;}
@@ -312,6 +325,14 @@ background: linear-gradient(180deg, rgba(189,177,177,1) 46%, rgba(255,255,255,1)
 
 	justify-content: space-between;
 }
+.productCont img {
+	border-radius: 10px;
+	transition: all 0.5s;
+}
+.productCont img:hover {
+	transform: scale(1.05);
+	transition: all 0.5s;
+}
 .productCont figure a {
 	display: flex;
 }
@@ -321,7 +342,7 @@ background: linear-gradient(180deg, rgba(189,177,177,1) 46%, rgba(255,255,255,1)
 	margin-right: 5px;
 }
 .price {
-color: #05971d;
+	color: #05971d;
 	font-weight: 600;
 }
 
