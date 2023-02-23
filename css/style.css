@@ -117,7 +117,7 @@ header.header {
 	box-shadow: 3px 3px 10px #000;
 }
 main.main {
-	padding-bottom: 50px;
+	padding-bottom: 10px;
 }
 .siteTitle {
 	font-size: 20px;
@@ -173,7 +173,7 @@ a.phonNumber::before {
   }
  ul.infoTimeWork_list {
  	background-color: rgba(239,239,239, 0.9);
-    padding: 20px;
+    padding: 15px;
     border-radius: 5px;
     border: 1px solid #fff;
 
@@ -318,15 +318,15 @@ li.infoTimeWork_item:not(:last-child){
 	height: auto;
 }
 .productCont {
-	padding:20px 0;
+	padding:10px 0;
 }
 .productCont figure {
 	display: flex;
-
 	justify-content: space-between;
 }
 .productCont img {
 	border-radius: 10px;
+	border: 1px solid #000;
 	transition: all 0.5s;
 }
 .productCont img:hover {
@@ -341,12 +341,13 @@ li.infoTimeWork_item:not(:last-child){
 	margin-left: 5px;
 	margin-right: 5px;
 }
+p.productInfo {
+	padding: 5px;
+}
 .price {
 	color: #05971d;
 	font-weight: 600;
 }
-
-
 
 @media screen and (max-width: 888px){
 	.footerContainer {
@@ -375,11 +376,11 @@ li.infoTimeWork_item:not(:last-child){
 	    width: calc(100% - 30px);
 	}
 	section.infoTimeWork {
-		padding-top: 50px;
-    	padding-bottom: 30px;
+		padding-top: 30px;
+    	padding-bottom: 20px;
 	}
 	.siteTitle {
-		font-size: 16px;
+		font-size: 15px;
 	}
 
 }
