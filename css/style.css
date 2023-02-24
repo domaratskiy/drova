@@ -208,6 +208,7 @@ li.infoTimeWork_item:not(:last-child){
 	font-size: 14px;
 	border: none;
 	appearance: none;
+	font-waight:600;
 }
 .accordion:not(:last-child) {
     border-bottom: 1px dashed black;
